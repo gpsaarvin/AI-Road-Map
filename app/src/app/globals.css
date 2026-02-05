@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 8px;
+  --brand-blue: #2B7FD9;
+  --brand-orange: #F59E0B;
+}
+
+html, body { height: 100%; }
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#2B7FD9] to-[#F59E0B] bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-brand {
+    @apply bg-gradient-to-br from-[#2B7FD9] via-blue-500 to-[#F59E0B];
+  }
+  
+  .glass {
+    @apply bg-white/80 dark:bg-neutral-900/80 backdrop-blur-xl border border-gray-200/50 dark:border-neutral-800/50;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-1;
+  }
+
+  .glow-border {
+    @apply border-2 border-transparent bg-gradient-to-r from-[#2B7FD9] to-[#F59E0B] bg-clip-border;
+  }
+}
